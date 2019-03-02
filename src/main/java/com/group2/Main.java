@@ -25,27 +25,31 @@ public class Main {
                 FCFS fcfs = new FCFS(disk);
                 fcfs.run();
                 break;
-//            case 1:
-//                System.out.println("Shortest Seek Time First:");
-//                sstf(disk);
-//                break;
-//            case 2:
-//                System.out.println("SCAN: Elevator Algorithm:");
-//                scan(disk);
-//                break;
-//            case 3:
-//                System.out.println("LOOK:"
-//                );
-//                look(disk);
-//                break;
-//            case 4:
-//                System.out.println("CSCAN: Similar to SCAN but severing in one direction only:");
-//                cscan(disk);
-//                break;
-//            case 5:
-//                System.out.println("C-LOOK:");
-//                clook(disk);
-//                break;
+            case 1:
+                System.out.println("Shortest Seek Time First:");
+//                SSTF sstf = new SSTF(disk);
+//                sstf.run();
+                break;
+            case 2:
+                System.out.println("SCAN: Elevator Algorithm:");
+                SCAN scan = new SCAN(disk);
+                scan.run();
+                break;
+            case 3:
+                System.out.println("LOOK:");
+                LOOK look = new LOOK(disk);
+                look.run();
+                break;
+            case 4:
+                System.out.println("CSCAN: Similar to SCAN but severing in one direction only:");
+                C_SCAN c_scan = new C_SCAN(disk);
+                c_scan.run();
+                break;
+            case 5:
+                System.out.println("C-LOOK:");
+                C_LOOK c_look = new C_LOOK(disk);
+                c_look.run();
+                break;
         }
     }
     // create new object Disk
