@@ -27,8 +27,8 @@ public class Main {
                 break;
             case 1:
                 System.out.println("Shortest Seek Time First:");
-//                SSTF sstf = new SSTF(disk);
-//                sstf.run();
+                SSTF sstf = new SSTF(disk);
+                sstf.run();
                 break;
             case 2:
                 System.out.println("SCAN: Elevator Algorithm:");
@@ -52,20 +52,7 @@ public class Main {
                 break;
         }
     }
-    // create new object Disk
-//    private static Disk copyDisk(Disk disk) {
-//        Disk newDisk = new Disk();
-//        newDisk.size = disk.cylinder;
-//        newDisk.startPos = disk.startPos;
-//        newDisk.numberOfRequest = disk.numberOfRequest;
-//        newDisk.request = new int[disk.request.length];
-//        for (int i = 0; i < disk.request.length; i++) {
-//            newDisk.request[i] = disk.request[i];
-//        }
-//
-//        return newDisk;
-//    }
-
+    
 
 
 }
