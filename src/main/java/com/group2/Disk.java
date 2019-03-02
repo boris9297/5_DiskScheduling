@@ -5,7 +5,7 @@ class Disk {
     final int size = 5000;
     final int startPos = 2255;
     final int previousPos = 1723;
-    final static int[] request_array = {2055, 1175, 2304, 2700, 513, 1680, 256, 1401, 4922, 3692};
+    final int[] request_array = {2055, 1175, 2304, 2700, 513, 1680, 256, 1401, 4922, 3692};
     final boolean up = (0 < startPos - previousPos)? true: false ;
 
     public Disk(){
