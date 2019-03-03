@@ -1,21 +1,28 @@
 package com.group2;
 
-public class FCFS extends Schedule {
+/*
+FCFS: First Come First Serve disk-scheduling algorithm
+ */
+
+public class FCFS {
     Disk disk;
-    public FCFS (Disk disk) {
-        this.disk = disk;
+    Schedule schedule;
+
+    public FCFS() {
+        disk = new Disk();
+        schedule = new Schedule();
     }
+
     public void run() {
         int pre = disk.startPos;
-        int[] sortSchedule = new int[disk.request_array.length];
-
+        int[] scheduled = new int[disk.request_array.length];
+        int totalDistance = 0;
         for (int i = 0; i < disk.request_array.length; i ++) {
             int current = disk.request_array[i];
             totalDistance += Math.abs(current - pre);
             pre = current;
-            sortSchedule[i] = current;
+            scheduled[i] = current;
         }
-
-        printResult(sortSchedule, totalDistance);
+        schedule.printResult(scheduled, totalDistance);
     }
 }
